@@ -41,11 +41,11 @@ if SERVER['NETWORK']:
     try:
         import qrcode
     except:
-        os.system('pip3 install qrcode')
+        os.system('python3 -m pip install qrcode')
     try:
         from PIL import Image
     except:
-        os.system('pip3 install Pillow')
+        os.system('python3 -m pip install Pillow')
     img = qrcode.make('http://'+public_ip+':'+SERVER['PORT'])
     img.save('qrcode.png')
 os.system('cls' if os.name == 'nt' else 'clear')
